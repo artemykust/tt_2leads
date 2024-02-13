@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Rubik";
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-x: hidden;
+}
+
+header {
+  padding: 20px;
+  height: fit-content;
+  width: 100%;
+}
+
+.header-title {
+  margin: auto;
+  width: fit-content;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  gap: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-img {
+  height: auto;
+  width: 300px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  height: 90%;
+}
+
+.modal-img-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 100%;
+  width: 100%;
+}
+
+.modal-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.btn-prev,
+.btn-next {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  height: fit-content;
+  width: fit-content;
+  font-size: 60px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.btn-prev {
+  left: 10px;
+}
+
+.btn-next {
+  right: 10px;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  line-height: 20px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  height: fit-content;
+  width: 100%;
+  padding: 20px;
+}
+
+.telegram-link {
+  color: gray;
+}
