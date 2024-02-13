@@ -83,16 +83,24 @@ main {
 
   height: 100%;
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   max-height: 100%;
   max-width: 100%;
   margin: auto;
+
+  display: inline;
+
+  transition: transform 0.5s ease;
+}
+
+.modal-img:hover {
+  transform: scale(2);
 }
 
 .btn-prev,
