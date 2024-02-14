@@ -10,7 +10,7 @@ import { register } from "swiper/element/bundle";
 
 register();
 
-export default function Modal({ items, onClose }) {
+export default function Modal({ items, onClose, activeSlide }) {
   return (
     <div className="modal">
       <span className="close" onClick={onClose}>
@@ -23,6 +23,7 @@ export default function Modal({ items, onClose }) {
         navigation={true}
         modules={[Navigation]}
         className="mySwiper"
+        initialSlide={activeSlide}
       >
         {items.map((item, index) => (
           <SwiperSlide className="swiper-slide" key={index}>
