@@ -8,6 +8,7 @@ import Modal from "./components/Modal/Modal";
 function App() {
   const [items, setItems] = useState([]);
   const [modalOpened, setModalOpened] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     axios
@@ -17,10 +18,19 @@ function App() {
       });
   }, []);
 
+  const handleClick = (e) => {
+    setActiveSlide(e.target.id - 1);
+    setModalOpened(true);
+  };
+
   return (
     <>
       {modalOpened && (
-        <Modal items={items} onClose={() => setModalOpened(false)} />
+        <Modal
+          items={items}
+          onClose={() => setModalOpened(false)}
+          activeSlide={activeSlide}
+        />
       )}
 
       <div className="wrapper">
@@ -31,9 +41,10 @@ function App() {
           {items.map((item) => (
             <Card
               key={item.id}
+              id={item.id}
               src={item.src}
               description={item.description}
-              openModal={() => setModalOpened(true)}
+              openModal={handleClick}
             />
           ))}
         </main>
