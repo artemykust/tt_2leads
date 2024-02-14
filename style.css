@@ -100,7 +100,8 @@ main {
 }
 
 .modal-img:hover {
-  transform: scale(2);
+  transform: scale(1.5);
+  cursor: zoom-in;
 }
 
 .btn-prev,
